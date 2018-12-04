@@ -41,3 +41,12 @@ deploy:
         key: $HEROKU_KEY
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
+
+deploysecurity:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: node-sample-tag
+        repository: werckerrepo/nodesample
+        registry: registry.cloud.tenable.com
